@@ -7,18 +7,28 @@ This project delivers end-to-end telecom network performance insights through **
 
 ## SQL Analysis 🛠️
 
-- **City Performance Ranking** :
-  - Created a combined performance score by summing normalized `LTE_Accessibility`, `LTE_Retainability`, and `Network_Availability`, then ranked cities in descending order to identify top and bottom performers. 🏅
-  
-- **Areas Exceeding Average Availability** :
-- Filtered areas (network cells) where `Network_Availability` surpasses the overall average, listing them for potential best-practice benchmarking. 📈
-  
-- **Top VoLTE Accessibility by Region & Area** :
-- Aggregated `VoLTE_Accessibility` rates, grouped by `Region` and `Area`, to find the highest-performing city–area combinations in voice connectivity. 🎤
-  
-- **High-Performance Regional LTE Metrics** :
--  Calculated average LTE metrics (`Accessibility`, `Retainability`, `Intra/Inter-Frequency Handover Success`) for regions where `LTE_Accessibility` > 95%, ordering results to spotlight top regions. 🌟
+### SQL Analysis 🛠️
+We performed comprehensive telecom network analysis using SQL CTEs (Common Table Expressions) for modular, readable queries:
 
+1. **City Performance Benchmarking**  
+   - Used 2 CTEs: 
+     - `city_score` to calculate metric averages
+     - `comined_score` to create performance score
+   - Applied `RANK()` window function for final ranking
+
+2. **Network Availability Comparison**  
+   - Created 2 CTEs:
+     - `avg_network_area` for per-area averages
+     - `over_all_average` for network-wide baseline
+   - Used `CROSS JOIN` to compare areas against baseline
+
+3. **Regional VoLTE Leadership**  
+   - Built CTE `top_cities` to find peak VoLTE per city
+   - Applied `ROW_NUMBER()` with partitioning for regional ranking
+
+4. **High-Performance LTE Regions**  
+   - Used direct aggregation with `HAVING` clause
+   - Filtered regions with >95% LTE Accessibility
 ---
 
 ## Dashboard Overview (Power BI) 📊
