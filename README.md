@@ -8,7 +8,7 @@ This project delivers end-to-end telecom network performance insights through **
 ## SQL Analysis 🛠️
 
 - **City Performance Ranking** :
--  Created a combined performance score by summing normalized `LTE_Accessibility`, `LTE_Retainability`, and `Network_Availability`, then ranked cities in descending order to identify top and bottom performers. 🏅
+  - Created a combined performance score by summing normalized `LTE_Accessibility`, `LTE_Retainability`, and `Network_Availability`, then ranked cities in descending order to identify top and bottom performers. 🏅
   
 - **Areas Exceeding Average Availability** :
 - Filtered areas (network cells) where `Network_Availability` surpasses the overall average, listing them for potential best-practice benchmarking. 📈
