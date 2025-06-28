@@ -6,11 +6,20 @@ This project delivers end-to-end telecom network performance insights through **
 ---
 
 ## SQL Analysis 🛠️
-- **Preview Dataset**: Initial exploration of `public.telecom_data` to verify record counts, data types, and null value checks using `SELECT * LIMIT 10` queries. 📊
-- **City Performance Ranking**: Created a combined performance score by summing normalized `LTE_Accessibility`, `LTE_Retainability`, and `Network_Availability`, then ranked cities in descending order to identify top and bottom performers. 🏅
-- **Areas Exceeding Average Availability**: Filtered areas (network cells) where `Network_Availability` surpasses the overall average, listing them for potential best-practice benchmarking. 📈
-- **Top VoLTE Accessibility by Region & Area**: Aggregated `VoLTE_Accessibility` rates, grouped by `Region` and `Area`, to find the highest-performing city–area combinations in voice connectivity. 🎤
-- **High-Performance Regional LTE Metrics**: Calculated average LTE metrics (`Accessibility`, `Retainability`, `Intra/Inter-Frequency Handover Success`) for regions where `LTE_Accessibility` > 95%, ordering results to spotlight top regions. 🌟
+- **Preview Dataset**:
+- Initial exploration of `public.telecom_data` to verify record counts, data types, and null value checks using `SELECT * LIMIT 10` queries. 📊
+  
+- **City Performance Ranking**:
+-  Created a combined performance score by summing normalized `LTE_Accessibility`, `LTE_Retainability`, and `Network_Availability`, then ranked cities in descending order to identify top and bottom performers. 🏅
+  
+- **Areas Exceeding Average Availability**:
+- Filtered areas (network cells) where `Network_Availability` surpasses the overall average, listing them for potential best-practice benchmarking. 📈
+  
+- **Top VoLTE Accessibility by Region & Area**:
+- Aggregated `VoLTE_Accessibility` rates, grouped by `Region` and `Area`, to find the highest-performing city–area combinations in voice connectivity. 🎤
+  
+- **High-Performance Regional LTE Metrics**:
+-  Calculated average LTE metrics (`Accessibility`, `Retainability`, `Intra/Inter-Frequency Handover Success`) for regions where `LTE_Accessibility` > 95%, ordering results to spotlight top regions. 🌟
 
 ---
 
